@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :recruiters, controllers: { sessions: 'recruiters/sessions' }
+  devise_for :job_seekers, controllers: { sessions: 'job_seekers/sessions' }
   resources :job_offers
   resources :companies
   # root 'pages#index'
